@@ -97,12 +97,12 @@ for (i in 1:tamanho)
   }
   df <- df[ ,c(1,9)]
 }
-  
+
 # 3. Veja que os genes tem diferentes proporções de variantes. Qual seria o significado biológico desta observação?
+# R = Isso nos mostra que dependendo do tipo de gene, e como se dá sua formação e expressão, certos tipos de mutação são favorecidos, 
+# enquanto outros tipos têm menores chances de ocorrer.
 
-
-  
-# 4.  Crie uma função que retorna quais os exons (Exon_Number) estão acometido em cada um dos Top 10 genes.
+# 4. Crie uma função que retorna quais os exons (Exon_Number) estão acometido em cada um dos Top 10 genes.
 
 class_exon <- function()
 {
@@ -120,7 +120,12 @@ class_exon <- function()
   df_exon
 }
   
-# 5. Você vai ver que em alguns genes as mutações ocorrem em múltiplos exons, em outros, eles ocorrem em um número limitado de exons. Você acha que isto tem alguma implicação biológica? Explique.
+# 5. Você vai ver que em alguns genes as mutações ocorrem em múltiplos exons, em outros, eles ocorrem em um número limitado de exons. 
+# Você acha que isto tem alguma implicação biológica? Explique.
+
+# R = Provavelmente, pois quanto mais éxons são afetados em uma mutação, maiores as chances de ocorrerem efeitos deletérios devido a um erro de tradução do éxon.
+# Por consequência, no caso de menos éxons afetados, ou no caso de íntrons afetados, a chance de ocorrerem efeitos deletérios é menor.
+
 
 # 6. Classifique os tumores baseado na presença ou ausência de mutação em cada um dos 10 Top genes e coloque esta informação na tabela de dados clínicos. Ou seja, você terá que inserir 10 colunas na tabela e ela vai ter a informação se a amostra tem ou não a mutação no gene. Incluir somente se a mutação for dos tipos Frame_Shift_Del Frame_Shift_Ins, Missense_Mutation, Nonsense_Mutation e Splice_Site.
 
